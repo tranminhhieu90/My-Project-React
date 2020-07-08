@@ -1,10 +1,10 @@
 import React from 'react';
-
+import { Row , Col} from 'reactstrap';
 function Home() {
   return (
-    <div >
-        <p>Home</p>
-    </div>
+    <Row>
+         <p>Home</p>
+    </Row>
   );
 }
 
