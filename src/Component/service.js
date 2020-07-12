@@ -1,11 +1,11 @@
 import React from 'react';
 
-function User() {
+function Service() {
   return (
     <div >
-        <p>User</p>
+        <p>Service</p>
     </div>
   );
 }
 
-export default User;
+export default Service;

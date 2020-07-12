@@ -4,15 +4,17 @@ import {
   Route,
 } from "react-router-dom";
 import Home from '../../Component/home'
-import User from '../../Component/user'
-import About from '../../Component/about'
+import Service from '../../Component/service'
+import Contact from '../../Component/contact'
+import Login from '../../Component/login'
 function RouterComponent() {
   return (
     <div>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/user' component={User} />
-          <Route path='/about' component={About} />
+          <Route path='/service' component={Service} />
+          <Route path='/contact' component={Contact} />
+          <Route path='/login' component={Login} />
         </Switch>
     </div>
   );
