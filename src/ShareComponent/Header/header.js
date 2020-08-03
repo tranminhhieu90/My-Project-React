@@ -4,7 +4,6 @@ import {
 } from "react-router-dom";
 import styled from 'styled-components'
 import 'antd/dist/antd.css';
-import { Menu } from 'antd';
 function Header() {
   return (
     <div>

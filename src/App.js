@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
-import {
-  BrowserRouter as Router,
-} from "react-router-dom";
-import Main from './ShareComponent/Main/main'
-import SwitchRouter from './ShareComponent/Router/Router'
+import { BrowserRouter} from "react-router-dom";
+import Header from './ShareComponent/Header/header'
+import Footer from './ShareComponent/Footer/footer'
+import Router from './ShareComponent/Router/Router'
 function App() {
   return (
     <div>
-      <Router>
-        <Main />
-        <SwitchRouter/>
-      </Router>
+      <BrowserRouter>
+        <Header />
+        <Router/>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
