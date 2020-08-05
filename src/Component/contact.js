@@ -4,8 +4,6 @@ import {
 } from "react-router-dom";
 function Contact() {
   let { path, url } = useRouteMatch();
-  console.log('url', url)
-  console.log('path', path)
   return (
     <div >
       <h2>Contact</h2>

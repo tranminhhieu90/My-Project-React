@@ -8,10 +8,10 @@ function Header() {
   return (
     <div>
       <UlMenu>
-        <LiMenu><a><Link to='/'>Home</Link></a></LiMenu>
-        <LiMenu><a><Link to='/service'>Service</Link></a></LiMenu>
-        <LiMenu><a><Link to='/contact'>Contact</Link></a></LiMenu>
-        <LiMenu style={{float: 'right'}}><a><Link to='/login'>Login</Link></a></LiMenu>
+        <LiMenu><Link to='/'>Home</Link></LiMenu>
+        <LiMenu><Link to='/service'>Service</Link></LiMenu>
+        <LiMenu><Link to='/contact'>Contact</Link></LiMenu>
+        <LiMenu style={{float: 'right'}}><Link to='/login'>Login</Link></LiMenu>
       </UlMenu>
     </div>
   );
