@@ -4,12 +4,14 @@ import {
 } from "react-router-dom";
 import styled from 'styled-components'
 import 'antd/dist/antd.css';
+import { useTranslation } from 'react-i18next';
 function Header() {
+  const { t, i18n } = useTranslation();
   return (
     <div>
       <UlMenu>
-        <LiMenu><Link to='/'>Home</Link></LiMenu>
-        <LiMenu><Link to='/service'>Service</Link></LiMenu>
+        <LiMenu><Link to='/'>{t('en.main.home')}</Link></LiMenu>
+        <LiMenu><Link to='/service'>{t('en.main.services')}</Link></LiMenu>
         <LiMenu><Link to='/contact'>Contact</Link></LiMenu>
         <LiMenu style={{float: 'right'}}><Link to='/login'>Login</Link></LiMenu>
       </UlMenu>
