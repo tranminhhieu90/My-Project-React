@@ -1,6 +1,6 @@
 {
     "main" : {
-        "home": "Trang Chu",
-        "services": "Dich Vu"
+        "home" :"Home",
+        "services" : "Services"
     }
 }
