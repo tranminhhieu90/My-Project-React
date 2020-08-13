@@ -9,17 +9,20 @@ const axiosClient = axios.create({
     paramsSerializer: params => queryString.stringify(params),
 });
 
-axiosClient.interceptors.request.use(async (config) => {
-    // Handle token here ...
-    return config;
-})
-axiosClient.interceptors.response.use((response) => {
-    if (response && response.data) {
-        return response.data;
-    }
-    return response;
-}, (error) => {
-    // Handle errors
-    throw error;
-});
 export default axiosClient;
+
+// import axios from 'axios';
+// // import { authHeader } from '../helpers/auth-header';
+// let headers = {
+//   'Content-Type': 'application/json',
+// };
+
+// let axiosOption = {
+//   withCredentials: true,
+//   // headers: {...headers,...authHeader()}
+// }
+// if(process.env.NODE_ENV === 'production'){
+//   // axiosOption = {...axiosOption, ...{baseURL: 'https://app.ausy-solution.com'}};
+// } 
+// axiosOption = {...axiosOption, ...{baseURL: 'http://192.168.0.95:3000/api/v1/'}};
+// export default axios.create(axiosOption);
