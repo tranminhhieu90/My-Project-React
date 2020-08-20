@@ -2,14 +2,16 @@ import React from 'react';
 import {
   Link, useRouteMatch
 } from "react-router-dom";
-function Contact() {
+import { withNamespaces } from 'react-i18next';
+
+function Contact({ t }) {
   let { path, url } = useRouteMatch();
   return (
     <div >
-      <h2>Contact</h2>
+      <h2>{t('main.contact')}</h2>
       <ul>
         <li>
-          <Link to={`${url}/facebook`}>Via Facebook</Link>
+          <Link to={`${url}/facebook`}>Facebook</Link>
         </li>
         <li>
           <Link to={`${url}/github`}>Github</Link>
@@ -22,4 +24,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default withNamespaces()(Contact);

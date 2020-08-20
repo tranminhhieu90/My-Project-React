@@ -1,6 +1,7 @@
 {
     "main" : {
         "home" :"Home",
-        "services" : "Services"
+        "services" : "Services",
+        "contact" : "Contact"
     }
 }

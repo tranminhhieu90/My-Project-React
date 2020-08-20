@@ -11,7 +11,7 @@ function Header({ t, i18n }) {
       <UlMenu>
         <LiMenu><Link to='/'>{t('main.home')}</Link></LiMenu>
         <LiMenu><Link to='/service'>{t('main.services')}</Link></LiMenu>
-        <LiMenu><Link to='/contact'>Contact</Link></LiMenu>
+        <LiMenu><Link to='/contact'>{t('main.contact')}</Link></LiMenu>
         <LiMenu style={{ float: 'right' }}><Link to='/login'>Login</Link></LiMenu>
         <LiMenu style={{ float: 'right' }}>
           <Translate>
@@ -54,7 +54,7 @@ const Translate = styled.div`
   display: block;
   color: white;
   text-align: center;
-  
+
   padding: 10px ;
   border-right:1px solid #bbb;
 `

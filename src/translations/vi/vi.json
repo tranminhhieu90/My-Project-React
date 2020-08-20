@@ -1,6 +1,7 @@
 {
     "main" : {
         "home" :"Trang chủ",
-        "services" : "Dịch vụ"
+        "services" : "Dịch vụ",
+        "contact" : "Liên hệ"
     }
 }
