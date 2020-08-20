@@ -5,7 +5,6 @@ import {
 import styled from 'styled-components'
 import 'antd/dist/antd.css';
 import { withNamespaces } from 'react-i18next';
-import { Select } from 'antd';
 function Header({ t, i18n }) {
   return (
     <div>
@@ -16,8 +15,8 @@ function Header({ t, i18n }) {
         <LiMenu style={{ float: 'right' }}><Link to='/login'>Login</Link></LiMenu>
         <LiMenu style={{ float: 'right' }}>
           <Translate>
-            <span onClick={() => i18n.changeLanguage('en')}>ENG</span> | 
-            <span onClick={() => i18n.changeLanguage('vi')} >VIE</span>
+            <TranslateSpan onClick={() => i18n.changeLanguage('en')}>ENG</TranslateSpan> |
+            <TranslateSpan onClick={() => i18n.changeLanguage('vi')} >VIE</TranslateSpan>
           </Translate>
         </LiMenu>
 
@@ -52,6 +51,15 @@ const LiMenu = styled.li`
 `
 const Translate = styled.div`
   color: white;
+  display: block;
+  color: white;
+  text-align: center;
+  
+  padding: 10px ;
+  border-right:1px solid #bbb;
 `
 
+const TranslateSpan = styled.span`
+  cursor: grab;
+`
 export default withNamespaces()(Header);
