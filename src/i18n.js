@@ -1,10 +1,14 @@
 import i18n from "i18next";
 import { reactI18nextModule } from "react-i18next";
 import translationEN from "./translations/en/en.json";
+import translationVI from "./translations/vi/vi.json";
 
 const resources = {
   en: {
     translation: translationEN
+  },
+  vi: {
+    translation: translationVI
   }
 };
 
