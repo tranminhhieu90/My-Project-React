@@ -12,7 +12,7 @@ function FaceBook() {
     }, []);
 
     return (
-      <div>dadad</div>
+    <div>{productList}</div>
     )
 }
 
