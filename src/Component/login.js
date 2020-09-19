@@ -1,6 +1,5 @@
 import React from 'react';
 import { Row, Col, Input, Button } from 'antd';
-import styled from 'styled-components';
 
 export function Login() {
   const handleSubmit = (event) => {
@@ -38,7 +37,4 @@ export function Login() {
   );
 }
 
-const Label = styled.p`
-
-`
 export default Login;

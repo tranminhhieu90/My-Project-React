@@ -5,7 +5,7 @@ import {
 import { withNamespaces } from 'react-i18next';
 
 function Contact({ t }) {
-  let { path, url } = useRouteMatch();
+  let { url } = useRouteMatch();
   return (
     <div >
       <h2>{t('main.contact')}</h2>
