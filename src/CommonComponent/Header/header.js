@@ -11,7 +11,17 @@ function Header({ t, i18n }) {
       <UlMenu>
         <LiMenu><Link to='/'>{t('main.home')}</Link></LiMenu>
         <LiMenu><Link to='/service'>{t('main.services')}</Link></LiMenu>
-        <LiMenu><Link to='/contact'>{t('main.contact')}</Link></LiMenu>
+        <LiMenu><Link to='/component'>{t('main.component')}</Link></LiMenu>
+        <LiMenu>
+          <DropdownDiv>
+            <Link >Profile</Link>
+            <DropContent>
+              <a href="/new-profile">New Profile</a>
+              <a href="#">Change Password</a>
+              <a href="">Change Email</a>
+            </DropContent>
+          </DropdownDiv>
+        </LiMenu>
         <LiMenu style={{ float: 'right' }}><Link to='/login'>Login</Link></LiMenu>
         <LiMenu style={{ float: 'right' }}>
           <Translate>
@@ -19,7 +29,6 @@ function Header({ t, i18n }) {
             <TranslateSpan onClick={() => i18n.changeLanguage('vi')} >VIE</TranslateSpan>
           </Translate>
         </LiMenu>
-
       </UlMenu>
     </div>
   );
@@ -61,5 +70,33 @@ const Translate = styled.div`
 
 const TranslateSpan = styled.span`
   cursor: grab;
+`
+
+
+const DropContent = styled.div`
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  a:hover {
+    background-color: #ddd;
+  }
+`
+const DropdownDiv = styled.div`
+  :hover
+  ${DropContent} {
+    display: block;
+  }
+}
 `
 export default withNamespaces()(Header);

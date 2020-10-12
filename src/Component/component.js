@@ -4,24 +4,21 @@ import {
 } from "react-router-dom";
 import { withNamespaces } from 'react-i18next';
 
-function Contact({ t }) {
+function ListComponent({ t }) {
   let { url } = useRouteMatch();
   return (
     <div >
-      <h2>{t('main.contact')}</h2>
+      <h2>{t('main.component')}</h2>
       <ul>
         <li>
           <Link to={`${url}/facebook`}>Facebook</Link>
         </li>
         <li>
-          <Link to={`${url}/github`}>Github</Link>
-        </li>
-        <li>
-          <Link to={`${url}/phone_number`}>Phone Number</Link>
+          <Link to={`${url}/drop_file`}>Drag File</Link>
         </li>
       </ul>
     </div>
   );
 }
 
-export default withNamespaces()(Contact);
+export default withNamespaces()(ListComponent);

@@ -5,20 +5,22 @@ import {
 } from "react-router-dom";
 import Home from '../../Component/home'
 import Service from '../../Component/service'
-import Contact from '../../Component/contact'
+import Component from '../../Component/component'
 import FaceBook from '../../Component/facebook'
-import GitHub from '../../Component/github'
 import Login from '../../Component/login'
+import DropFile from '../../Component/dropFile'
+import NewProfile from '../../Component/NewProfile'
 function RouterComponent() {
   return (
     <div>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/service' component={Service} />
-          <Route exact path='/contact' component={Contact} />
-          <Route exact path='/contact/facebook' component={FaceBook} />
-          <Route exact path='/contact/github' component={GitHub} />
+          <Route exact path='/component' component={Component} />
+          <Route exact path='/component/facebook' component={FaceBook} />
+          <Route exact path='/component/drop_file' component={DropFile} />
           <Route exact path='/login' component={Login} />
+          <Route exact path='/new-profile' component={NewProfile} />
         </Switch>
     </div>
   );
