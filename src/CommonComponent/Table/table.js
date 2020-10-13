@@ -37,7 +37,6 @@ function ReactTable({ columns, data, updateMyData, skipPageReset }){
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    rows,
     prepareRow,
     page,
     canPreviousPage,
