@@ -14,11 +14,11 @@ function Header({ t, i18n }) {
         <LiMenu><Link to='/component'>{t('main.component')}</Link></LiMenu>
         <LiMenu>
           <DropdownDiv>
-            <Link >Profile</Link>
+            <Link to='#'>Profile</Link>
             <DropContent>
               <a href="/new-profile">New Profile</a>
-              <a href="#">Change Password</a>
-              <a href="">Change Email</a>
+              <a href="/change-pass">Change Password</a>
+              <a href="/change-email">Change Email</a>
             </DropContent>
           </DropdownDiv>
         </LiMenu>

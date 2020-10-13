@@ -4,6 +4,7 @@ import {
 } from "react-router-dom";
 import { withNamespaces } from 'react-i18next';
 
+
 function ListComponent({ t }) {
   let { url } = useRouteMatch();
   return (

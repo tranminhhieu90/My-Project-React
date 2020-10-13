@@ -9,9 +9,11 @@
     "antd": "^4.4.1",
     "axios": "^0.19.2",
     "i18next": "^19.6.3",
+    "namor": "^1.1.2",
     "query-string": "^6.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-dropzone": "^11.2.0",
     "react-i18next": "^9.0.10",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
@@ -19,8 +21,7 @@
     "react-table": "^7.5.1",
     "reactstrap": "^8.5.1",
     "redux": "^4.0.5",
-    "styled-components": "^5.1.1",
-    "namor": "^1.1.2"
+    "styled-components": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
