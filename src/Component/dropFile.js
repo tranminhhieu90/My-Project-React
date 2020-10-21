@@ -1,24 +1,38 @@
 import React, { useState } from "react";
 import Dropzone from "react-dropzone";
 import styled from "styled-components";
+import { toast } from 'react-toastify';
+import Toastify from "./toastify";
+import { Button } from "antd";
 function DragDropFile() {
   const [fileNames, setFileNames] = useState([]);
-  const [imgSrc, setImgSrc] = useState('')
+  const [imgSrc, setImgSrc] = useState("");
   const handleDrop = (acceptedFiles) => {
     const reader = new FileReader();
     reader.readAsDataURL(acceptedFiles[0]);
-    reader.addEventListener("load", function () {
-      setImgSrc(`${reader.result}`)
-    }, false);
+    reader.addEventListener(
+      "load",
+      function () {
+        setImgSrc(`${reader.result}`);
+      },
+      false
+    );
     setFileNames(acceptedFiles.map((file) => file.name));
+    toast.error('upload File success', {
+      position: toast.POSITION.TOP_CENTER
+    })
   };
+  const hieu = () => {
+    toast.warning('upload File sdsdsd', {
+      position: toast.POSITION.TOP_CENTER
+    })
+  }
   return (
     <div>
       <h2>Drag and Drop File</h2>
-      <Dropzone 
-        onDrop={handleDrop}
-        multiple={false}
-        >
+      <Toastify/>
+      <button onClick={hieu}>test</button>
+      <Dropzone onDrop={handleDrop} multiple={false}>
         {({ getRootProps, getInputProps }) => (
           <DropDiv {...getRootProps({ className: "dropzone" })}>
             <input {...getInputProps()} />
@@ -33,7 +47,7 @@ function DragDropFile() {
             <li key={fileName}>{fileName}</li>
           ))}
         </ul>
-        <img src={imgSrc} alt="Image preview..."/>
+        <img src={imgSrc} alt="Image preview..." />
       </div>
     </div>
   );

@@ -9,7 +9,6 @@ const randomNumber = () => {
 function Home() {
   const hobbyList = useSelector(state => state.hobby.list)
   const dispath = useDispatch()
-  console.log('hobbyList', hobbyList)
   const handleAddHobbyClick = () => {
     const newId = randomNumber()
     const newHobby = {
